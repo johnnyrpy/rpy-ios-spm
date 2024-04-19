@@ -4,22 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "Reepay",
+    name: "ReepaySDK",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
     ],
     products: [
         .library(
-            name: "ReepayCheckoutSheet",
-            targets: ["ReepayCheckoutSheet"]),
+            name: "ReepayWrapper",
+            targets: ["ReepayWrapper"]),
     ],
     dependencies: [
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
         .target(
-            name: "ReepayCheckoutSheet",
+            name: "ReepayWrapper",
             dependencies: [
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ]
