@@ -11,7 +11,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Reepay",
+            name: "ReepayCheckoutSheet",
             targets: ["ReepayCheckoutSheet"]),
     ],
     dependencies: [
