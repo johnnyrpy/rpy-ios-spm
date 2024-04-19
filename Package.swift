@@ -9,13 +9,13 @@ let package = Package(
     platforms: [
         .iOS(.v15),
     ],
-    dependencies: [
-        .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
-    ],
     products: [
         .library(
             name: "ReepayCheckoutSheet",
             targets: ["ReepayCheckoutSheet"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
         .binaryTarget(
