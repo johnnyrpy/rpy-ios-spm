@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "ReepayMirror",
+    name: "Reepay",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
     ],
     products: [
         .library(
-            name: "EmptyLibrary",
+            name: "Reepay",
             targets: ["ReepayCheckoutSheet"]),
     ],
     dependencies: [
