@@ -11,8 +11,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ReepayCheckoutSheet",
-            targets: ["ReepayCheckoutSheet"]),
+            name: "ReepayMirror",
+            targets: ["ReepayMirror"]),
     ],
     dependencies: [
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
