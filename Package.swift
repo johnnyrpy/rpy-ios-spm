@@ -23,5 +23,6 @@ let package = Package(
             dependencies: [
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ]),
+            path: "Sources/ReepayCheckoutSheet",
         ]
     )
