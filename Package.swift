@@ -26,7 +26,7 @@ let package = Package(
         .target(
             name: "ReepayWrapper",
             dependencies: [
-                "ReepayCheckoutSheet"
+                "ReepayWrapper"
             ]
         )
     ]
