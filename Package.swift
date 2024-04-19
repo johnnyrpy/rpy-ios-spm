@@ -11,8 +11,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ReepayCheckoutSheet",
-            targets: ["ReepayCheckoutSheet"]),
+            name: "Test",
+            targets: ["Test"]),
     ],
     dependencies: [
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
@@ -29,7 +29,7 @@ let package = Package(
         //     checksum: "109e9661c16691649c005ed1190f54a19c230f93beeff5c0c5569e332356dce1"
         // ),
         .target(
-            name: "ReepayCheckoutSheet",
+            name: "Test",
             dependencies: [
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ],
