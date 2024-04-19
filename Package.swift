@@ -37,7 +37,6 @@ let package = Package(
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ],
             path: "Sources/Test",
-            sources: ["Dummy.swift"]
         ),
     ]
 )
