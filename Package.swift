@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ReepayMirror",
+    name: "rpy-ios-spm",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
@@ -18,6 +18,11 @@ let package = Package(
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
+        .target(
+            name: "Test",
+            path: "Sources/Test",
+            sources: ["Dummy.swift"]
+        ),
         // .binaryTarget(
         //     name: "ReepayCheckoutSheet",
         //     url: "https://github.com/reepay/reepay-ios/releases/download/1.0.0/Reepay.xcframework.zip",
