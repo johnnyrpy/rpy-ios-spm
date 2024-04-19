@@ -19,7 +19,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ReepayMirror",
+            name: "ReepayCheckoutSheet",
             dependencies: [
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ]),
