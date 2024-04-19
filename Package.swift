@@ -20,7 +20,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ReepayCheckoutSheet",
-            path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework"
+            path: "Frameworks/ReepayCheckoutSheet.xcframework"
         )
     ]
 )
