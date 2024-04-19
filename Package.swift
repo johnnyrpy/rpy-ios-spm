@@ -22,9 +22,6 @@ let package = Package(
             name: "ReepayCheckoutSheet",
             dependencies: [
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
-                .binaryTarget(
-                    name: "ReepayCheckoutSheet",
-                    path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework"),
             ]),
         ]
     )
