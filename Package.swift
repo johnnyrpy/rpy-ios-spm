@@ -4,21 +4,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "Reepay SPM",
+    name: "ReepayMirror",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
     ],
     products: [
         .library(
-            name: "ReepayCheckoutSheet",
-            targets: ["ReepayCheckoutSheet"]),
+            name: "ReepayMirror",
+            targets: ["ReepayMirror"]),
     ],
     dependencies: [
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
         .binaryTarget(
-            name: "ReepayCheckoutSheet",
-            path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework"),
+            name: "ReepayMirror",
+            dependencies: [
+                .product(name: "ReepayCheckoutSheet", package: "Reepay")
+            ]),
     ])
