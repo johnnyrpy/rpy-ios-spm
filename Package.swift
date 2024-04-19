@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Reepay",
+    name: "ReepayMirror",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
