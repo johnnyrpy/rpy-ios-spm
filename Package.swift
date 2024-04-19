@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "ReepayCheckoutSheet",
             dependencies: [
-                "ReepayCheckoutSheet.xcframework"
+                "/ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework"
             ]),
     ]
 )
