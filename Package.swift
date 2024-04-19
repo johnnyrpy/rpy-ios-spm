@@ -18,14 +18,10 @@ let package = Package(
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
-        .binaryTarget(
-            name: "ReepayCheckoutSheet",
-            path: "Frameworks/ReepayCheckoutSheet.xcframework"
-        ),
         .target(
             name: "ReepayCheckoutSheet",
             dependencies: [
-                .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
+                "ReepayCheckoutSheet"
             ]),
     ]
 )
