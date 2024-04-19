@@ -11,16 +11,14 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ReepayCheckoutSheet",
-            targets: ["ReepayCheckoutSheet"]),
+            name: "Reepay",
+            targets: ["Reepay"]),
     ],
     dependencies: [
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .binaryTarget(
-            name: "ReepayCheckoutSheet",
-            path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework"),
+        .target(
+            name: "Reepay",
+            dependencies: ["Reepay"]),
     ])
