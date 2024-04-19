@@ -18,12 +18,9 @@ let package = Package(
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
-        .target(
+        .binaryTarget(
             name: "ReepayCheckoutSheet",
-            dependencies: [
-                .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
-            ]),
-            path: "Sources/ReepayCheckoutSheet",
-            sources: ["Dummy.swift"]
-        ]
-    )
+            path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework"
+        )
+    ]
+)
