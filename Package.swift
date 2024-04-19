@@ -15,7 +15,7 @@ let package = Package(
             targets: ["ReepayCheckoutSheet"]),
     ],
     dependencies: [
-        .package(name: "Reepay", url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
+        .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
