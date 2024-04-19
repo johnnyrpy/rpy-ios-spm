@@ -19,7 +19,7 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "ReepayBinary",
+            name: "ReepayCheckoutSheet",
             url: "https://github.com/reepay/reepay-ios/releases/download/1.0.0/Reepay.xcframework.zip",
             checksum: "109e9661c16691649c005ed1190f54a19c230f93beeff5c0c5569e332356dce1"
         ),
