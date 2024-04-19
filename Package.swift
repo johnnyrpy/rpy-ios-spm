@@ -11,7 +11,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Reepay",
+            name: "ReepayCheckoutSheet",
             targets: ["ReepayCheckoutSheet"]),
     ],
     dependencies: [
@@ -22,6 +22,9 @@ let package = Package(
             name: "ReepayCheckoutSheet",
             dependencies: [
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
+                .binaryTarget(
+                    name: "ReepayCheckoutSheet",
+                    path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework"),
             ]),
         ]
     )
