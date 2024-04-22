@@ -33,6 +33,10 @@ let package = Package(
         //     url: "https://github.com/reepay/reepay-ios/releases/download/1.0.0/Reepay.xcframework.zip",
         //     checksum: "109e9661c16691649c005ed1190f54a19c230f93beeff5c0c5569e332356dce1"
         // ),
+        .binaryTarget(
+            name: "ReepayCheckoutSheet",
+            path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework",
+        ),
         .target(
             name: "Test",
             dependencies: [
@@ -40,12 +44,6 @@ let package = Package(
             ],
             path: "Sources/Test",
             sources: ["Dummy.swift"]
-        ),
-        .target(
-            name: "ReepayCheckoutSheet",
-            dependencies: [
-                .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
-            ],
         ),
     ]
 )
