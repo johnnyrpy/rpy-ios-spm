@@ -16,6 +16,9 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
+        .package(
+            url: "https://github.com/apple/swift-log.git"
+        )
     ],
     targets: [
         // .target(
@@ -31,6 +34,7 @@ let package = Package(
         .target(
             name: "Test",
             dependencies: [
+                "Logging",
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ],
             path: "Sources/Test",
