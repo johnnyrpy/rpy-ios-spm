@@ -14,9 +14,9 @@ let package = Package(
             name: "Test",
             targets: ["Test"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
-    ],
+    // dependencies: [
+    //     .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
+    // ],
     targets: [
         // .target(
         //     name: "Test",
@@ -30,9 +30,9 @@ let package = Package(
         // ),
         .target(
             name: "Test",
-            dependencies: [
-                .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
-            ],
+            // dependencies: [
+            //     .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
+            // ],
             path: "Sources/Test",
             sources: ["Dummy.swift"]
         ),
