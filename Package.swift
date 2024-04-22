@@ -12,7 +12,7 @@ let package = Package(
     products: [
         .library(
             name: "ReepayCheckoutSheet",
-            targets: ["Test"]
+            targets: ["ReepayCheckoutSheet"]
         ),
         .library(
             name: "Test",
@@ -40,6 +40,12 @@ let package = Package(
             ],
             path: "Sources/Test",
             sources: ["Dummy.swift"]
+        ),
+        .target(
+            name: "ReepayCheckoutSheet",
+            dependencies: [
+                .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
+            ],
         ),
     ]
 )
