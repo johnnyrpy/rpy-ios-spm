@@ -31,7 +31,7 @@ let package = Package(
         // ),
         .binaryTarget(
             name: "ReepayCheckoutSheet",
-            path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework",
+            path: "ReepayCheckoutSheet.xcframework",
         ),
         // .target(
         //     name: "Test",
