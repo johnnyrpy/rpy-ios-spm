@@ -31,9 +31,8 @@ let package = Package(
         .target(
             name: "Test",
             dependencies: [
-                "reepay-ios"
                 "Test",
-                // .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
+                .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ],
             // path: "Sources/Test",
             // sources: ["Dummy.swift"]
