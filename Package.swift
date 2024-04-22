@@ -14,6 +14,10 @@ let package = Package(
             name: "ReepayCheckoutSheet",
             targets: ["ReepayCheckoutSheet"]
         ),
+        .library(
+            name: "Test",
+            targets: ["Test"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
@@ -33,13 +37,13 @@ let package = Package(
             name: "ReepayCheckoutSheet",
             path: "ReepayCheckoutSheet.xcframework",
         ),
-        // .target(
-        //     name: "Test",
-        //     dependencies: [
-        //         .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
-        //     ],
-        //     path: "Sources/Test",
-        //     sources: ["Dummy.swift"]
-        // ),
+        .target(
+            name: "Test",
+            dependencies: [
+                // .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
+            ],
+            path: "Sources/Test",
+            sources: ["Dummy.swift"]
+        ),
     ]
 )
