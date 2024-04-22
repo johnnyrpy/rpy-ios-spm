@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "rpy-ios-spm",
+    name: "Reepay",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
