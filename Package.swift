@@ -31,12 +31,12 @@ let package = Package(
         .target(
             name: "Test",
             dependencies: [
-                "Test",
                 "ReepayCheckoutSheet"
+                "Test",
                 // .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ],
-            path: "Sources/Test",
-            sources: ["Dummy.swift"]
+            // path: "Sources/Test",
+            // sources: ["Dummy.swift"]
         ),
     ]
 )
