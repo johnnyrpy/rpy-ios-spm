@@ -12,7 +12,7 @@ let package = Package(
     products: [
         .library(
             name: "ReepayCheckoutSheet",
-            targets: ["ReepayCheckoutSheet"]
+            targets: ["Test"]
         ),
         .library(
             name: "Test",
