@@ -12,7 +12,7 @@ let package = Package(
     products: [
         .library(
             name: "Test",
-            targets: ["Test", "ReepayCheckoutSheet"]
+            targets: ["Test"]
         ),
     ],
     dependencies: [
@@ -31,7 +31,7 @@ let package = Package(
         // ),
         .binaryTarget(
             name: "ReepayCheckoutSheet",
-            path: "ReepayCheckoutSheet.xcframework",
+            path: "ReepayCheckoutSheet/ReepayCheckoutSheet.xcframework",
         ),
         .target(
             name: "Test",
