@@ -1,0 +1,9 @@
+{
+  "object" : [
+    {
+      "mirror" : "https://github.com/johnnyrpy/rpy-ios-spm.git",
+      "original" : "https://github.com/reepay/reepay-ios.git"
+    }
+  ],
+  "version" : 1
+}
