@@ -15,7 +15,7 @@ let package = Package(
             targets: ["Test"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0"),
+        .package(url: "https://github.com/reepay/reepay-ios.git", from: "1.0.0", branch: "main"),
     ],
     targets: [
         // .target(
