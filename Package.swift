@@ -29,9 +29,9 @@ let package = Package(
         //     checksum: "109e9661c16691649c005ed1190f54a19c230f93beeff5c0c5569e332356dce1"
         // ),
         .target(
-            name: "No",
+            name: "Test",
             dependencies: [
-                "Test",
+                "reepay-ios",
                 .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ],
             path: "Sources/Test",
