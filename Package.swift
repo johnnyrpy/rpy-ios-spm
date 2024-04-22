@@ -31,7 +31,7 @@ let package = Package(
         .target(
             name: "Test",
             dependencies: [
-                "ReepayCheckoutSheet"
+                "reepay-ios"
                 "Test",
                 // .product(name: "ReepayCheckoutSheet", package: "reepay-ios")
             ],
