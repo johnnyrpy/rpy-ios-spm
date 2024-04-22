@@ -1,0 +1,4 @@
+module Test {
+    header "/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/Test-Swift.h"
+    requires objc
+}

@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "Test-debug.module": ["<Test-debug.module>"]
+  "main": ["<Test-debug.module>"]
+  "test": ["<Test-debug.module>"]
+default: "main"
+nodes:
+  "/Users/johnny/Documents/GitHub/rpy-ios-spm/Sources/Test/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/johnny/Documents/GitHub/rpy-ios-spm/Sources/Test/Dummy.swift"]
+    outputs: ["/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/sources"]
+    description: "Write auxiliary file /Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/sources"
+
+  "/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<Test-debug.module>":
+    tool: phony
+    inputs: ["/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/Dummy.swift.o","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.swiftmodule"]
+    outputs: ["<Test-debug.module>"]
+
+  "C.Test-debug.module":
+    tool: shell
+    inputs: ["/Users/johnny/Documents/GitHub/rpy-ios-spm/Sources/Test/Dummy.swift","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/sources"]
+    outputs: ["/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/Dummy.swift.o","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.swiftmodule"]
+    description: "Compiling Swift Module 'Test' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Test","-emit-dependencies","-emit-module","-emit-module-path","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.swiftmodule","-output-file-map","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/sources","-I","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/johnny/Documents/GitHub/rpy-ios-spm/.build/arm64-apple-macosx/debug/Test.build/Test-Swift.h","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","rpy_ios_spm"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/johnny/Documents/GitHub/rpy-ios-spm/Sources/Test/","/Users/johnny/Documents/GitHub/rpy-ios-spm/Package.swift","/Users/johnny/Documents/GitHub/rpy-ios-spm/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
